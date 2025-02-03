@@ -1,0 +1,214 @@
+[
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.GuestController",
+    "Method": "CreateGuest",
+    "RelativePath": "api/guests",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "guestCreateDto",
+        "Type": "ultraGroup.Application.DTOs.Guest.GuestCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.GuestController",
+    "Method": "GetGuestsByRoomId",
+    "RelativePath": "api/guests/room/{roomId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.HotelController",
+    "Method": "CreateHotel",
+    "RelativePath": "api/Hotel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hotelCreateDto",
+        "Type": "ultraGroup.Application.DTOs.Hotel.HotelCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.HotelController",
+    "Method": "GetAllHotel",
+    "RelativePath": "api/Hotel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.HotelController",
+    "Method": "UpdateHotel",
+    "RelativePath": "api/Hotel",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hotelUpdateDto",
+        "Type": "ultraGroup.Application.DTOs.Hotel.HotelUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.HotelController",
+    "Method": "GetHotel",
+    "RelativePath": "api/Hotel/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.HotelController",
+    "Method": "DeleteHotel",
+    "RelativePath": "api/Hotel/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.ReservationController",
+    "Method": "CreateReservation",
+    "RelativePath": "api/reservations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reservationCreateDto",
+        "Type": "ultraGroup.Application.DTOs.Reservation.ReservationCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.ReservationController",
+    "Method": "GetReservation",
+    "RelativePath": "api/reservations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.ReservationController",
+    "Method": "NotifyGuest",
+    "RelativePath": "api/reservations/{id}/notify",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.RoomController",
+    "Method": "AddRoomToHotel",
+    "RelativePath": "api/Room",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomCreateDto",
+        "Type": "ultraGroup.Application.DTOs.Room.RoomCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.RoomController",
+    "Method": "GetRooms",
+    "RelativePath": "api/Room",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hotelId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.RoomController",
+    "Method": "UpdateRoom",
+    "RelativePath": "api/Room",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomUpdateDto",
+        "Type": "ultraGroup.Application.DTOs.Room.RoomUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelReservation.WebAPI.Controllers.RoomController",
+    "Method": "GetAvailableRooms",
+    "RelativePath": "api/Room/available",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
