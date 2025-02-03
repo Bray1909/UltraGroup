@@ -1,0 +1,142 @@
+USE [HotelBooking]
+GO
+/****** Object:  Table [dbo].[Guests]    Script Date: 3/02/2025 4:07:16 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Guests](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[FullName] [nvarchar](255) NULL,
+	[DateOfBirth] [datetime] NULL,
+	[Gender] [nvarchar](50) NULL,
+	[DocumentType] [nvarchar](50) NULL,
+	[DocumentNumber] [nvarchar](100) NULL,
+	[Email] [nvarchar](255) NULL,
+	[PhoneNumber] [nvarchar](50) NULL,
+	[RoomId] [int] NULL,
+	[CreationDate] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Hotels]    Script Date: 3/02/2025 4:07:16 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Hotels](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](100) NULL,
+	[Location] [nvarchar](100) NULL,
+	[CreationDate] [datetime] NULL,
+	[status] [bit] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Reservations]    Script Date: 3/02/2025 4:07:16 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Reservations](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[HotelId] [int] NULL,
+	[RoomId] [int] NULL,
+	[StartDate] [date] NULL,
+	[EndDate] [date] NULL,
+	[GuestName] [nvarchar](100) NULL,
+	[GuestEmail] [nvarchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Rooms]    Script Date: 3/02/2025 4:07:16 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Rooms](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[HotelId] [int] NULL,
+	[Type] [nvarchar](50) NULL,
+	[Price] [decimal](10, 2) NULL,
+	[Available] [bit] NULL,
+	[TypeCurrency] [nvarchar](20) NULL,
+	[CreationDate] [date] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Guests] ON 
+GO
+INSERT [dbo].[Guests] ([Id], [FullName], [DateOfBirth], [Gender], [DocumentType], [DocumentNumber], [Email], [PhoneNumber], [RoomId], [CreationDate]) VALUES (1, N'carlos', CAST(N'2025-02-03T19:36:22.100' AS DateTime), N'string', N'string', N'string', N'string', N'string', 1, CAST(N'2025-02-03T09:36:37.360' AS DateTime))
+GO
+INSERT [dbo].[Guests] ([Id], [FullName], [DateOfBirth], [Gender], [DocumentType], [DocumentNumber], [Email], [PhoneNumber], [RoomId], [CreationDate]) VALUES (2, N'carlotosdas', CAST(N'2025-02-03T19:41:40.520' AS DateTime), N'string', N'string', N'string', N'string', N'string', 1, CAST(N'2025-02-03T09:41:52.730' AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[Guests] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Hotels] ON 
+GO
+INSERT [dbo].[Hotels] ([Id], [Name], [Location], [CreationDate], [status]) VALUES (2, N'h1', N'h2', CAST(N'2025-02-01T12:57:03.650' AS DateTime), NULL)
+GO
+INSERT [dbo].[Hotels] ([Id], [Name], [Location], [CreationDate], [status]) VALUES (3, N'string2', N'string2', CAST(N'2025-02-01T13:05:26.123' AS DateTime), 1)
+GO
+INSERT [dbo].[Hotels] ([Id], [Name], [Location], [CreationDate], [status]) VALUES (4, N'string', N'string', CAST(N'2025-02-01T13:07:03.237' AS DateTime), 1)
+GO
+INSERT [dbo].[Hotels] ([Id], [Name], [Location], [CreationDate], [status]) VALUES (5, N'string', N'string', CAST(N'2025-02-01T15:22:46.370' AS DateTime), 1)
+GO
+INSERT [dbo].[Hotels] ([Id], [Name], [Location], [CreationDate], [status]) VALUES (6, NULL, NULL, CAST(N'2025-02-01T15:34:55.740' AS DateTime), 1)
+GO
+INSERT [dbo].[Hotels] ([Id], [Name], [Location], [CreationDate], [status]) VALUES (7, NULL, NULL, CAST(N'2025-02-01T15:40:54.633' AS DateTime), 1)
+GO
+INSERT [dbo].[Hotels] ([Id], [Name], [Location], [CreationDate], [status]) VALUES (8, N'string', N'string', CAST(N'2025-02-03T09:57:37.027' AS DateTime), 1)
+GO
+INSERT [dbo].[Hotels] ([Id], [Name], [Location], [CreationDate], [status]) VALUES (9, N'string', N'string', CAST(N'2025-02-03T10:06:14.110' AS DateTime), 1)
+GO
+INSERT [dbo].[Hotels] ([Id], [Name], [Location], [CreationDate], [status]) VALUES (10, N'string', N'string', CAST(N'2025-02-03T10:18:18.287' AS DateTime), 1)
+GO
+SET IDENTITY_INSERT [dbo].[Hotels] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Reservations] ON 
+GO
+INSERT [dbo].[Reservations] ([Id], [HotelId], [RoomId], [StartDate], [EndDate], [GuestName], [GuestEmail]) VALUES (1, 2, 1, CAST(N'2025-02-03' AS Date), CAST(N'2025-03-03' AS Date), N'string', N'string')
+GO
+INSERT [dbo].[Reservations] ([Id], [HotelId], [RoomId], [StartDate], [EndDate], [GuestName], [GuestEmail]) VALUES (2, 2, 2, CAST(N'2025-02-03' AS Date), CAST(N'2025-02-03' AS Date), N'carlos', N'gg')
+GO
+INSERT [dbo].[Reservations] ([Id], [HotelId], [RoomId], [StartDate], [EndDate], [GuestName], [GuestEmail]) VALUES (3, 2, 2, CAST(N'2025-02-03' AS Date), CAST(N'2025-02-03' AS Date), N'carlos', N'gg')
+GO
+INSERT [dbo].[Reservations] ([Id], [HotelId], [RoomId], [StartDate], [EndDate], [GuestName], [GuestEmail]) VALUES (4, 2, 3, CAST(N'2025-02-03' AS Date), CAST(N'2025-02-03' AS Date), N'bray', N'brayavid19@gmail.com')
+GO
+SET IDENTITY_INSERT [dbo].[Reservations] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Rooms] ON 
+GO
+INSERT [dbo].[Rooms] ([Id], [HotelId], [Type], [Price], [Available], [TypeCurrency], [CreationDate]) VALUES (1, 2, N'string', CAST(0.00 AS Decimal(10, 2)), 1, N'string', CAST(N'2025-02-03' AS Date))
+GO
+INSERT [dbo].[Rooms] ([Id], [HotelId], [Type], [Price], [Available], [TypeCurrency], [CreationDate]) VALUES (2, 3, N'sencilla', CAST(1000.00 AS Decimal(10, 2)), 1, N'COP', CAST(N'2025-02-03' AS Date))
+GO
+INSERT [dbo].[Rooms] ([Id], [HotelId], [Type], [Price], [Available], [TypeCurrency], [CreationDate]) VALUES (3, 3, N'sencilla', CAST(100.00 AS Decimal(10, 2)), 0, N'cop', CAST(N'2025-02-03' AS Date))
+GO
+SET IDENTITY_INSERT [dbo].[Rooms] OFF
+GO
+ALTER TABLE [dbo].[Guests] ADD  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[Reservations]  WITH CHECK ADD FOREIGN KEY([HotelId])
+REFERENCES [dbo].[Hotels] ([Id])
+GO
+ALTER TABLE [dbo].[Reservations]  WITH CHECK ADD FOREIGN KEY([RoomId])
+REFERENCES [dbo].[Rooms] ([Id])
+GO
+ALTER TABLE [dbo].[Rooms]  WITH CHECK ADD FOREIGN KEY([HotelId])
+REFERENCES [dbo].[Hotels] ([Id])
+GO
