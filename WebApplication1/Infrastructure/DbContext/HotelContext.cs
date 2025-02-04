@@ -11,6 +11,7 @@ namespace HotelReservation.Infrastructure.Data
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<EmergencyContact> EmergencyContact { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

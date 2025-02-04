@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HotelReservation.Application.DTOs;
 using HotelReservation.Domain.Entities;
 using ultraGroup.Application.DTOs.Guest;
 using ultraGroup.Application.DTOs.Hotel;
@@ -17,6 +18,7 @@ namespace ultraGroup.Application
             CreateMap<RoomUpdateDto, Room>();
             CreateMap<ReservationCreateDto, Reservation>();
             CreateMap<GuestCreateDto, Guest>();
+            CreateMap<EmergencyContactCreateDto, EmergencyContact>();
 
         }
     }
